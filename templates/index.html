@@ -1,0 +1,28 @@
+<!-- index.html -->
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='test.css') }}">
+    <script type=text/javascript src="{{ url_for('static', filename='jquery-3.4.1.js') }}"></script>
+    <script type=text/javascript src="{{ url_for('static', filename='test.js') }}"></script>
+  </head>
+  <body>
+    <h1>Life-Log</h1>
+
+    <input id="user" value="ユーザー名を記入"/>
+    <button type="button" onclick="fill_profile()">Go</button>
+
+    <h2>プロフィール情報</h2>
+    <table border="1" width="400" id="profile"></table>
+    <div id="data_select"></div>
+    <!--編集 id設置-->
+    <div id="profile_change"></div>
+
+    <h2>グラフ</h2>
+    <canvas id="graph" width="300" height="200"></canvas>
+     <!-- style="border:1px solid #000000;" -->
+
+    <h2>データ</h2>
+    <table border="1" width="300" id="data"></table>
+  </body>
+</html>
